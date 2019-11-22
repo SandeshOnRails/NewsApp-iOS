@@ -26,8 +26,8 @@ extension ArticleViewModel {
     }
 }
 
-struct ArticleListViewModel: Decodable {
-    let articles: [Article]
+struct ArticleListViewModel {
+    var articles: [Article]
 }
 
 extension ArticleListViewModel {

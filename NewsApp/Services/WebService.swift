@@ -10,7 +10,7 @@ import Foundation
 
 class WebService {
     
-    func getArticle(url: URL, completion: @escaping ([Article]) -> ()) {
+    func getArticle(url: URL, completion: @escaping ([Article]?) -> ()) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
                 let articleList = try? JSONDecoder().decode(ArticleList.self, from: data)
